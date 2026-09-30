@@ -1,0 +1,20 @@
+# Central hyperparameters for the Fashion-ANN pipeline
+# All scripts read from this file — never hard-code values in src/
+
+preprocess:
+  # Fraction of training data held out as validation set
+  test_size: 0.1
+  # Random seed for reproducible train/val split
+  seed: 42
+
+train:
+  # Number of units in the hidden Dense layer
+  dense_units: 256
+  # Dropout fraction applied after the hidden Dense layer
+  dropout_rate: 0.3
+  # Adam optimizer learning rate
+  learning_rate: 0.001
+  # Number of full passes over training data
+  epochs: 20
+  # Mini-batch size for SGD
+  batch_size: 64
