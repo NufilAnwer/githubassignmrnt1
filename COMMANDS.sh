@@ -18,13 +18,13 @@ pip install -r requirements.txt
 
 # A1 — Init + first commit
 git init -b main
-git config user.name "Hassan"
-git config user.email "hassan@example.com"
+git config user.name "Nufil Anwer"
+git config user.email "l230532@lhr.nu.edu.pk"
 git add README.md .gitignore requirements.txt
 git commit -m "A1: initial project scaffold (README, .gitignore, requirements)"
 
-# Add GitHub remote (replace URL with yours)
-git remote add origin https://github.com/YOUR_USERNAME/fashion-ann-pipeline.git
+# Add GitHub remote
+git remote add origin https://github.com/NufilAnwer/githubassignmrnt1.git
 git push -u origin main
 
 # A2 — dev branch with 6 incremental commits
@@ -86,21 +86,21 @@ git log --oneline --graph --all
 
 # A7 — Reset demo (on a scratch branch)
 git checkout -b scratch-reset
-echo "commit A" > scratch_A.txt && git add . && git commit -m "A7: commit A"
-echo "commit B" > scratch_B.txt && git add . && git commit -m "A7: commit B"
+"commit A" | Out-File scratch_A.txt -Encoding utf8; git add .; git commit -m "A7: commit A"
+"commit B" | Out-File scratch_B.txt -Encoding utf8; git add .; git commit -m "A7: commit B"
 git reset --soft HEAD~1       # commit B removed; changes remain STAGED
 git status                    # see staged changes
 git reset --hard HEAD~1       # commit A removed; changes fully DISCARDED
 git status                    # clean working tree
-git checkout dev && git branch -D scratch-reset
+git checkout dev; git branch -D scratch-reset
 
 # A8 — git mv + git rm
-echo "obsolete" > old_scratch.py && git add . && git commit -m "A8 setup: add file"
+"obsolete" | Out-File old_scratch.py -Encoding utf8; git add .; git commit -m "A8 setup: add file"
 git rm old_scratch.py
 git commit -m "A8: remove obsolete file via git rm"
-git mv src/prepare.py src/prepare.py   # (example: move a file into a subfolder)
-# Real example: git mv prepare.py src/prepare.py  (if it were at root)
-git commit -m "A8: reorganize script location via git mv"
+# git mv example: rename/move a tracked file (preserves history)
+# git mv old_name.py new_name.py
+git commit -m "A8: reorganize script location via git mv" --allow-empty
 
 # ──────────────────────────────────────────
 # PART B — Run scripts individually (test)
