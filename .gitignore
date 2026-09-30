@@ -1,0 +1,66 @@
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# DVC cache (handled by DVC internally — never commit raw cache)
+.dvc/cache
+.dvc/tmp
+.dvc/config.local
+
+# DVC-tracked payloads — tracked by .dvc pointer files instead
+/data/raw/
+/data/processed/
+/models/*.h5
+/models/history.csv
+
+# Google Drive OAuth credentials/tokens — NEVER commit these
+.dvc/tmp/gdrive-user-credentials.json
+gdrive-user-credentials.json
+credentials.json
+token.json
+
+# Model artifacts (large binaries — tracked by DVC)
+*.h5
+*.pkl
+*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
