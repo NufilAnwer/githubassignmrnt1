@@ -97,4 +97,4 @@ All hyperparameters are centralized in `params.yaml`. Edit them and re-run `dvc 
 
 ## Author
 
-Hassan — Assignment 3: End-to-End ML Versioning
+Hassan — Assignment 3: End-to-End ML Versioning (MSc MLOps)
