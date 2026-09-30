@@ -1,0 +1,1 @@
+﻿# Obsolete scratch file
