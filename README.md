@@ -67,7 +67,7 @@ pip install -r requirements.txt
 ### 3. Configure DVC Remote (Google Drive)
 
 ```bash
-dvc remote add -d gdrive_storage gdrive://https://drive.google.com/drive/folders/1J3eQRWhSXmSs5ESeTG_dFjl98Liwemi7
+dvc remote add -d gdrive_storage gdrive://1HebP6xcCRAfHT4jdPkwU_M4oKrwlP-MU
 ```
 
 ### 4. Run the Full Pipeline
